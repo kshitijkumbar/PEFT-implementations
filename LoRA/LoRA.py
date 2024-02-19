@@ -14,7 +14,7 @@ class LoRALayer(nn.Module):
         self.alpha = alpha
         
     def forward(self, x):
-        x = self.alpha(x @ self.A @ self.B)
+        x = self.alpha * (x @ self.A @ self.B)
         return x
     
             
